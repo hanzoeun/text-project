@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // ES5
+        function myFunc1(name, age) {
+            return '안녕 ' + name + ', 너의 나이는 ' + age + '살 이다!'; 
+        }
+
+        console.log(myFunc1('영희', 22));
+
+        // ES6
+        //문자열 연결을 위해 +를 사용하지 않으며 백틱(`)을 사용한다.
+        const myFunc2 = (name, age) => {
+            return `안녕 ${name}, 너의 나이는 ${age}살 이다!`; 
+        };
+
+        console.log(myFunc2('영희', 22));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

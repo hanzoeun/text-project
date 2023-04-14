@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attr-6</title>
+    <style>
+        /* 연결한 파일의 확장자로 찾는다. */
+        a[href$=hwp] {
+            background-color: yellow;
+        }
+        
+        a[href*="w3"]{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h3>회사 소개 파일 내려받기</h3>
+	<ul>
+		<li><a href="intro.hwp">hwp 파일</a></li>
+		<li><a href="intro.xls">엑셀 파일</a></li>
+		<li><a href="www.w3.org">w3</a></li>
+	</ul>
+</body>
+</html>

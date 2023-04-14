@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid1</title>
+    <style>
+        #wrapper {
+            display: grid;
+
+            /* 너비가 같은 컬럼 3개를 반복 */
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: minmax(100px, auto);
+        }
+
+        .items {
+            padding: 10px;
+            background-color: #eee;
+        }
+        /* 홀수는 odd 짝수는 even  */
+        .items:nth-child(odd) {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quis dolorem dicta praesentium repellendus, id architecto facilis enim velit dolore neque quae pariatur labore temporibus inventore, voluptatem quia quam possimus.</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quis dolorem dicta praesentium repellendus, id architecto facilis enim velit dolore neque quae pariatur </div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quis dolorem dicta praesentium repellendus, id architecto facilis enim velit </div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quis dolorem dicta praesentium repellendus, id </div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quis dolorem </div>
+    </div>
+</body>
+</html>

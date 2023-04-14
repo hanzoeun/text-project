@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열의 기본형
+        const numbers = [231, 52, 123, 32];
+        const a = numbers[2];
+        console.log(a);
+        console.log(numbers[1]);
+
+
+        const fruits = ['배', '사과', '바나나', '귤'];
+        console.log(fruits[0]);
+        console.log(fruits.length); // 배열의 길이
+
+        fruits[0] = '포도'; //배열의 특정 데이터를 바꿀때
+        console.log(fruits[0]);
+
+        //배열의 맨 끝에 데이터를 추가
+        fruits.push('딸기');
+        console.log(fruits);
+
+        //배열의 요소 제거 
+        fruits.splice(2,1); //2번 인덱스에서 부터 1개의 요소를 제거
+        console.log(fruits);
+
+        //배열의 요소 추가
+
+        fruits.splice(2,0,'멜론')
+        console.log(fruits);
+
+        //indexof 
+        console.log(fruits.indexOf('사과'));
+        let idx = fruits.indexOf('사과');
+        fruits.splice(idx,1);
+        console.log(fruits);
+        
+    </script>
+</body>
+</html>

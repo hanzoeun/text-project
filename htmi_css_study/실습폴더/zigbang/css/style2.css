@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+/* 초기화 태그 */
+body {
+    width: 1914px;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em !important;
+    height: 2000px; 
+    text-align: left;
+    flex-direction: column;
+    flex: 1 0 auto;
+    font-weight: 400;
+}
+
+ul {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+a {
+    color: black !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+p {
+    margin: 0 !important;
+}
+
+.wrap {
+    overflow: hidden;
+    min-width: 1914px;
+}
+
+/* 헤더 */
+
+header {
+    width: 1914px;
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    background-color: white;
+}
+
+nav {
+    /* 혹은 width: 100% */
+    width: 1914px;
+    margin:0px auto;
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: block;
+    border-bottom: 1px solid rgb(225, 225, 225);
+    background: rgb(255, 255, 255);
+    z-index: 101;
+    min-width: 1290px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+}
+
+.nav__menu > li {
+    /* 수평정렬 */
+    
+    display: inline-block;
+    padding: 20px; 
+    position: relative;
+    top: 0;
+    
+}
+
+.w1 { display: block; font-size: 17px; font-weight: bold; }
+.w2 { display: block; font-size: 13px; }
+
+.sub-menu {
+    display: none;
+    width: 200px;
+    background-color: white;
+    border: 1px solid rgb(212, 212, 212);
+    position: absolute;
+    top: 80px;
+}
+
+.nav__menu > li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu > li {
+    padding: 10px;
+}
+
+.header_link {
+    width:950px;
+    display: table-cell;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button_main {
+    
+    display: flex;
+    justify-content: flex-end;
+    min-width: 106px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: rgb(238, 238, 238);
+    padding: 5px 8px 6px
+}
+
+
+
+    /* 말줄임표만드는법 */
+ .test {
+    overflow: hidden;
+    text-overflow:  ellipsis;
+    white-space: nowrap;
+    width: 200px;
+ }
+
+main {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    overflow: hidden;
+    flex: 1 0 auto;
+    display: flex;
+}
+
+.main__banner {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-image: url(../images/bg.jpg)
+}
+
+.main__top_center {
+    width: 942px;
+    height: 340px;
+    padding: 156px;
+    margin: 0 auto;
+}
+
+.main__top_banner {
+    width: 684px;
+    height: 46px;
+    text-shadow: rgb(255, 255, 255) 0px 16px 40px;
+    font-size: 40px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: -80px auto;
+}
+
+.main__bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main__bottom_banner {
+    display: flex;
+    flex-direction: column;
+    width: 592px;
+    height: 196px;
+    margin: 0 auto;
+}
+
+.main__pills {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 40px;
+    background-color: rgba(3, 20, 45, 0.85);
+    border-radius: 8px;
+    margin-bottom: 26px;
+}
+
+
+
+
+

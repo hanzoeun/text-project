@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attr-3</title>
+     <Style>
+        ul {list-style: none;}
+        li {
+            display: inline-block;
+            margin: 10px;
+        }
+        li a {
+            padding: 5px 20px;
+            font-size: 14px ;
+            color: blue;
+            text-decoration: none;
+        }
+
+        .flat  {
+            background: #eee;
+            border: 1px solid #222;
+        }
+
+        a[class~= "botton"]{
+            box-shadow: black 4px 4px;
+            border-radius: 5px;
+            border: 1px soild #222 ;
+        }
+    </Style>
+</head>
+<body>
+    <ul>
+		<li><a href="#" class="flat">메뉴 1</a></li>
+		<li><a href="#" class="flat">메뉴 2</a></li>
+		<li><a href="#" class="button">메뉴 3</a></li>
+		<li><a href="#" class="flat button" >메뉴 4</a></li>
+	</ul>
+</body>
+</html>

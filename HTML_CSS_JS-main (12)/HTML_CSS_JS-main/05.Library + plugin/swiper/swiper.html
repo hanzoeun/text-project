@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 500px;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide.slide1 {
+            background: url(images/img_visual14.jpg);
+            background-size: cover;
+            background-position:center;
+        }
+        .swiper-slide.slide2 {
+            background: url(images/img_visual15.jpg);
+            background-size: cover;
+            background-position:center;
+        }
+        .swiper-slide.slide3 {
+            background: url(images/img_visual22.jpg);
+            background-size: cover;
+            background-position:center;
+        }
+        .swiper-slide.slide4 {
+            background: url(images/img_visual24.jpg);
+            background-size: cover;
+            background-position:center;
+        }
+        .swiper-slide.slide5 {
+            background: url(images/img_visual25.jpg);
+            background-size: cover;
+            background-position:center;
+        }
+
+        @media screen and (max-width: 767px) {
+            .swiper-slide.slide1 {
+                background: url(images/img_Mvisual14.jpg);
+                background-size: cover;
+                background-position:center;
+            }
+            .swiper-slide.slide2 {
+                background: url(images/img_Mvisual15.jpg);
+                background-size: cover;
+                background-position:center;
+            }
+            .swiper-slide.slide3 {
+                background: url(images/img_Mvisual22.jpg);
+                background-size: cover;
+                background-position:center;
+            }
+            .swiper-slide.slide4 {
+                background: url(images/img_Mvisual24.jpg);
+                background-size: cover;
+                background-position:center;
+            }
+            .swiper-slide.slide5 {
+                background: url(images/img_Mvisual25.jpg);
+                background-size: cover;
+                background-position:center;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Swiper1 -->
+    <div class="swiper-container swiper1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1"></div>
+            <div class="swiper-slide slide2"></div>
+            <div class="swiper-slide slide3"></div>
+            <div class="swiper-slide slide4"></div>
+            <div class="swiper-slide slide5"></div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <br/>
+    <br/>
+    <!-- Swiper2 -->
+    <div class="swiper-container swiper2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1"></div>
+            <div class="swiper-slide slide2"></div>
+            <div class="swiper-slide slide3"></div>
+            <div class="swiper-slide slide4"></div>
+            <div class="swiper-slide slide5"></div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+<script src="./js/swiper.min.js"></script>
+<script>
+    var swiper1 = new Swiper('.swiper1', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+        },
+        speed: 800,
+        effect: "fade",
+        on: {
+            init: function () {
+                console.log('swiper1 initialized');
+            },
+        },
+    });
+
+    var swiper2 = new Swiper('.swiper2', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+        },
+        speed: 800,
+        effect: "fade",
+        on: {
+            init: function () {
+                console.log('swiper2 initialized');
+            },
+        },
+    });
+
+
+    // swiper.on('slideChange', function () {
+    //     console.log('slide changed: '+ swiper.activeIndex);
+    // });
+
+    // console.log(swiper.width);
+
+    // swiper.slideNext(2000, true);
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perspective</title>
+    <style>
+        .origin {
+            width: 152px;
+            height: 180px;
+            border: 1px solid black;
+            margin: 20px;
+            float: left;
+        }
+
+        .origin > div {
+            width: 152px;
+            height: 180px;
+        }
+
+        .rotatex:hover {
+            transform: rotateX(50deg);
+        }
+        /* 원근감은 내가 변형하는 태그의 부모 태그에 줘야한다. */
+        #pers {
+            perspective: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="origin">
+		<div class="rotatex">
+			<img src="./images/sunset.jpg" alt="">
+		</div>
+	</div>
+	<div class="origin" id="pers">
+		<div class="rotatex">
+			<img src="./images/sunset.jpg" alt="">
+		</div>
+	</div>
+</body>
+</html>

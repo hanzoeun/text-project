@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/* 초기화 코드 */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    /* 영역 밖에 나오는 걸 숨긴다. */
+    overflow: hidden;
+    min-width: 1200px;
+}
+
+header {
+    height: 280px;
+    position: relative;
+}
+
+.header__search {
+    height: 200px;
+}
+
+.header__menu {
+    height: 80px;
+}
+
+main {
+    width: 1200px;
+    margin: 0 auto;
+
+    /* 자식태그에 float를 사용하면 부모태그에 overflow: hidden을 해준다. */
+    overflow: hidden;
+}
+
+.left {
+    width: 900px;
+    height: 2600px;
+    float: left;
+}
+
+.left__banner {
+    height: 150px;
+}
+
+.left__news {
+    height: 450px
+}
+
+.left__themecast {
+    height: 2000px;
+}
+
+.themecast_header {
+    height: 50px;
+}
+
+.themecast__contents {
+    height: 1950px;
+}
+
+.themecast_living1, .themecast_living2 {
+    height: 650px;
+}
+
+.living_list {
+    height: 100%;
+}
+
+.living_list li {
+    height: 20%;
+    display: flex;
+}
+
+.living_list_img {
+    display: block;
+    width: 250px;
+    
+}
+
+.living_list_contents {
+    display: block;
+    width: 650px;
+}
+
+.themecast_hotclick {
+    height: 350px;
+    display: flex;
+}
+
+.hotcilck_funding {
+    width: 33.33%;
+}
+
+.aside {
+    width: 300px;
+    height: 2600px;
+    float: right;
+}
+
+.aside__login {
+    height: 150px;
+}
+
+.aside__mini {
+    height: 50px;
+}
+
+.aside__banner {
+    height: 150px;
+}
+
+.aside__shopping {
+    height: 100%;
+}
+
+footer {
+    height: 500px;
+    clear: both;
+}
+
+    

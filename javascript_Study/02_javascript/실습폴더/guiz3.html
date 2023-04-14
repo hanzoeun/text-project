@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var grade = prompt('학년입력',0);
+       var score = prompt('점수입력',0);
+       var msg = '점수가 0미민 100초과이면"에러입니다"'
+
+       if (0 <= score && score <= 100) { //점수
+
+            if(grade == 4 && score >= 70) {
+                msg = '합격';
+            }
+            else if (grade > 4 && score >= 60) {
+                msg = '합격';
+            }
+
+            else if (grade < 4 && score >= 60) {
+                msg = '합격';
+            } 
+            else alert('불합격');
+
+            document.write(msg);
+        }else{
+            alert(msg);
+       }
+
+
+    </script>
+</body>
+</html>

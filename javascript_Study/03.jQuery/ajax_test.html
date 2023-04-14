@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script src="jquery-3.6.4.min.js"></script>
+
+
+    <script>
+        var urlAPI = "https://api.openweathermap.org/data/2.5/weather?q=incheon&appid=29ee82c522eb6d31c20fec03e3600447"
+
+
+        $.ajax({
+                type: "GET",
+                url: urlAPI,
+                dataType: "json",
+                async: false, 
+                success: function(data) {
+                        console.log(data);
+                },
+                error: function(request, status, error) {   
+                        console.log("code:" + request.status);
+                        console.log("message:" + request.responseText);
+                        console.log("error:" + error);
+                }
+        });
+    </script>
+</body>
+</html>

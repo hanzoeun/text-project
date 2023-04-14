@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var val1 = Number(prompt('숫자를 입력하세요',0))
+        var val2 = Number(prompt('숫자를 입력하세요',0))
+
+        function add(a, b) {
+            var result = a + b;
+            return result;
+        }
+
+        function sub(a, b) {
+            var result = a * b;
+            return result;
+        }
+
+        function division(a, b) {
+            var result = a % b;
+            return result;
+        }
+
+        function multiple(a, b) {
+            var result = a / b;
+            return result;
+        }
+
+       document.write(`더하기:${val1 + val2}`,'<br>')
+       document.write(`곱하기:${val1 * val2}`,'<br>')
+       document.write(`나누기:${val1 % val2}`,'<br>')
+       document.write(`나머지:${val1 / val2}`,'<br>')
+
+       
+    </script>
+</body>
+</html>

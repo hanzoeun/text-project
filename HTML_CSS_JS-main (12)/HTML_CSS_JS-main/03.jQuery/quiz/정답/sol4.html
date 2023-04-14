@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>This domain is established to be used for illustrative examples 
+        in documents. You may use this domain in examples without prior 
+        coordination or asking for permission.</p> 
+    <input type="button" value="Click to add new division" onclick="new_div()" />
+    
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        function new_div() {
+            //태그의 속성, 속성 값 지정
+            var test = {
+                id: "div",
+                class: "divclass",
+                css: {
+                "color": "Green"
+                }
+            };
+
+            var $div = $("<div>", test);
+            //<div></div>
+           
+            $div.html("New Division");
+            //<div>New Division</div>
+
+            $("body").append($div);
+        }
+    </script>
+</body>
+</html>

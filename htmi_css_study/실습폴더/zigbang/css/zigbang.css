@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* 초기화 태그 */
+body {
+    width: 1914px;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em !important;
+    height: 2000px;
+    display: flex;
+    
+    
+}
+ul {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+a {
+    color: black !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+p {
+    margin: 0 !important;
+}
+.wrap {
+    overflow: hidden;
+    min-width: 1200px;
+}
+/* 헤더 */
+header {
+    width: 1914px;
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    background-color: white;
+}
+nav {
+    /* 혹은 width: 100% */
+    width: 100%;
+    margin:0px auto;
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: block;
+    border-bottom: 1px solid rgb(225, 225, 225);
+    background: rgb(255, 255, 255);
+    z-index: 101;
+    min-width: 1290px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+}
+
+.nav__logo {
+    float: left;
+    margin-right: 10px;
+    width: 226px;
+    height: 79px;
+}
+
+.nav > a {
+    display: block;
+    cursor: pointer;
+    width: 198px;
+    height: 50px;
+    padding: 15px 8px 14px 20px;
+}
+
+.nav__menu {
+    float: left;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav__menu:hover  {
+    color: aqua;
+}
+
+.nav__menu > li {
+    /* 수평정렬 */
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    top: 0;
+}
+
+
+.w1 { display: block; font-size: 17px; font-weight: bold; }
+.w2 { display: block; font-size: 13px; }
+
+
+.sub-menu {
+    display: none;
+    width: 200px;
+    background-color: white;
+    border: 1px solid rgb(212, 212, 212);
+    position: absolute;
+    top: 80px;
+}
+.nav__menu > li:hover .sub-menu {
+    display: block;
+}
+
+.header_link {
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center;
+    text-align: center; */
+}
+
+.header__button {
+    min-width: 106px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: rgb(238, 238, 238);
+    padding: 5px 8px 6px;
+}
+

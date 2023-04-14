@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" id="myTable">
+        <tr>
+            <th>Year</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>2014</td>
+            <td>$10000</td>
+        </tr>
+        <tr>
+            <td>2015</td>
+            <td>$8000</td>
+        </tr>
+        <tr>
+            <td>2016</td>
+            <td>$9000</td>
+        </tr>
+    </table>
+    <p>
+    <input id="button1" type="button" value="Click"/></p>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $('#button1').click(function(){ 
+            $("#myTable").find("tr:gt(0)").remove();
+        });
+    </script>
+</body>
+</html>

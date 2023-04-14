@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//클래스를 사용해 객체지향화 할수있다(이전의 prototype과 같다.)
+    class MyClass {
+        constructor(name, age) {
+          // 생성자
+          this.name = name;
+          this.age = age;
+        }
+
+        sayHello() {
+          // 함수
+          console.log(`안녕 ${this.name} 너의 나이는 ${this.age}살이다`);
+        }
+
+        static phone = "01022223333";
+        //정적 함수
+        static compareAge() {
+          console.log(`static 메소드 입니다`);
+        }
+      }
+
+      // myClass 메서드 및 속성 상속
+      class UserProfile extends MyClass {
+        userName() {
+          console.log(this.name);
+        }
+      }
+
+      console.log(MyClass.phone);
+      MyClass.compareAge();
+      const profile = new UserProfile("영희", 22);
+
+      profile.sayHello(); // 안녕 영희 너의 나이는 22살이다.
+      profile.userName(); // 영희
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

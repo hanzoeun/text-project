@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #videoBg {
+          position:fixed;
+          right:0;
+          bottom:0;
+          width:auto; 
+          min-width:100%;
+          height:auto; 
+          min-height:100%;
+          z-index:-100;
+          background:url(images/seagull.jpg) no-repeat;
+          background-size:cover;
+        }
+
+        @media screen and (max-width:800px){  /* 800픽셀 이하는 이미지로 보여줌 */
+            body {
+                background:url(images/seagull-m.jpg) no-repeat fixed center #000;	
+                background-size:cover;
+            }
+            #videoBg{
+                display:none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="videoBg" poster="images/seagull.jpg">  
+        <source src="videos/seagull.webm" type="video/webm">
+        <source src="videos/seagull.mp4" type="video/mp4">
+        <source src="videos/seagull.ogv" type="video/ogg">			
+    </video>
+    <!-- <div id="container">
+        <h1>Jonathan Livingston Seagull</h1>				
+    </div> -->
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./js/vegas/vegas.min.css">
+</head>
+<body>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/vegas/vegas.min.js"></script>
+    <script>
+        $("document").ready(function() {
+            $('body').vegas({
+                slides: [
+                    { src: 'images/nature-1.jpg' },
+                    { src: 'images/nature-2.jpg' },
+                    { src: 'images/nature-3.jpg' },
+                    { src: 
+                        'images/swans.jpg',
+                        video: {
+                            src: ['videos/swans.mp4'],
+                            loop:false,
+                            mute:true
+                        }
+                    },
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
