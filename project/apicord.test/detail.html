@@ -38,7 +38,6 @@
             $(".imges").append(
               `<a href="./detail.html?id=${result.id}"><img src="${imgURL}"></a>`
             );
-            $(".imges").append(`${result.title}`);
           }
         },
         error: function (request, status, error) {
