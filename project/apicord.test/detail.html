@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const cuurentURL = location.href;
+
+      const ur10bj = new URL(cuurentURL);
+      const params = ur10bj.searchParams;
+
+      const id = params.get("id");
+
+      const movieURL = `https://api.themoviedb.org/3/movie/${id}/external_ids?api_key=eb06f4e18389aef971ea02874e132303`;
+
+      $.ajax({
+        type: "GET",
+        url: movieURL,
+        dataType: "json",
+        async: false,
+        success: function (data) {
+          console.log("전체 데이터", data);
+          const results = data.results;
+          console.log("영화 목록", results);
+
+          for (const result of results) {
+            console.log("영화제목", result.title);
+            console.log("영화리뷰", result.overview);
+            console.log("평점", result.vote_average);
+            console.log("포스터", result.poster_path);
+
+            let imgURL = "https://image.tmdb.org/t/p/w500" + result.poster_path;
+
+            $(".imges").append(
+              `<a href="./detail.html?id=${result.id}"><img src="${imgURL}"></a>`
+            );
+            $(".imges").append(`${result.title}`);
+          }
+        },
+        error: function (request, status, error) {
+          console.log("code:" + request.status);
+          console.log("message:" + request.responseText);
+          console.log("error:" + error);
+        },
+      });
+    </script>
+  </body>
+</html>

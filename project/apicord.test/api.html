@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="imges">
+      <div class="title"></div>
+      <img src="" />
+    </div>
+    <script src="./jquery-3.6.4.min.js"></script>
+    <script>
+      const movieURL =
+        "https://api.themoviedb.org/3/movie/popular?api_key=eb06f4e18389aef971ea02874e132303&language=ko-KR&page=1&region=KR";
+      $.ajax({
+        type: "GET",
+        url: movieURL,
+        dataType: "json",
+        async: false,
+        success: function (data) {
+          console.log("전체 데이터", data);
+          const results = data.results;
+          console.log("영화 목록", results);
+
+          for (const result of results) {
+            console.log("영화제목", result.title);
+            console.log("영화리뷰", result.overview);
+            console.log("평점", result.vote_average);
+            console.log("포스터", result.poster_path);
+
+            let imgURL = "https://image.tmdb.org/t/p/w500" + result.poster_path;
+
+            $(".imges").append(
+              `<a href="./detail.html?id=${result.id}"><img src="${imgURL}"></a>`
+            );
+            $(".imges").append(`${result.title}`);
+          }
+        },
+        error: function (request, status, error) {
+          console.log("code:" + request.status);
+          console.log("message:" + request.responseText);
+          console.log("error:" + error);
+        },
+      });
+    </script>
+  </body>
+</html>
